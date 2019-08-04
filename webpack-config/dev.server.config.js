@@ -6,10 +6,11 @@ module.exports = {
     server: './src/server.js',
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../dist'),
     publicPath: '/',
     filename: '[name].js'
   },
+  mode: 'development',
   target: 'node',
   node: {
     // Need this when working with express, otherwise the build fails

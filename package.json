@@ -6,16 +6,22 @@
   "author": "kml",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development",
+    "clean": "rm -rf dist",
+    "build:dev": "yarn clean && cross-env NODE_ENV=development webpack --mode development",
     "start": "node ./dist/server.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.2.0",
     "css-loader": "^3.1.0",
     "file-loader": "^4.1.0",
     "html-loader": "^0.5.5",
@@ -23,6 +29,9 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^4.2.1",
     "webpack-node-externals": "^1.7.2"
   }
 }

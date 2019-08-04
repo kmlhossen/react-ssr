@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
     homePageHandler(req, res, next);
 });
 
-router.get('/home', function (req, res) {
+router.get('/home', function (req, res, next) {
     homePageHandler(req, res, next);
 });
 
